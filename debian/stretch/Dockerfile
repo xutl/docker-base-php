@@ -15,8 +15,8 @@ RUN set -x \
 		libsqlite3-0 \
 		libxml2 \
 		libxslt1.1 \
-		libtidy-0.99-0 \
-		libjpeg8 \
+		libtidy5 \
+		libjpeg62-turbo \
 		libcurl3 \
 		libfreetype6 \
 	&& rm -r /var/lib/apt/lists/*
