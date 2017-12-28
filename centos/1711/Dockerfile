@@ -47,7 +47,7 @@ RUN set -x \
 
 RUN set -x \
 	&& cd /usr/local/src \
-	&& curl -fSL http://7xk96f.com1.z0.glb.clouddn.com/software/icu/icu4c-58_2-src.tgz -o icu4c-58_2-src.tgz \
+	&& curl -fSL http://download.icu-project.org/files/icu4c/58.2/icu4c-58_2-src.tgz -o icu4c-58_2-src.tgz \
 	&& tar zxf icu4c-58_2-src.tgz \
 	&& rm -rf icu4c-58_2-src.tgz \
 	&& cd icu/source/ \
