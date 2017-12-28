@@ -1,0 +1,41 @@
+language: bash
+
+sudo: required
+
+services:
+  - docker
+
+env:
+#   Centos
+  - OS_NAME=centos OS_VERSION=7 OS_SUITE=1711
+#   Debian
+  - OS_NAME=debian OS_VERSION=8 OS_SUITE=jessie
+  - OS_NAME=debian OS_VERSION=9 OS_SUITE=stretch
+#   Ubuntu
+  - OS_NAME=ubuntu OS_VERSION=14.04 OS_SUITE=trusty
+  - OS_NAME=ubuntu OS_VERSION=16.04 OS_SUITE=xenial
+
+before_install:
+  - export DOCKER_COMPOSE_VERSION=1.18.0
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+
+before_script:
+  - env | sort
+  - cd "$OS_NAME/$OS_SUITE"
+  - image="xutl/base-php:${OS_NAME}-${OS_SUITE}"
+
+script:
+  - travis_retry docker build -t "$image" .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login --username="${DOCKER_REGISTRY_USER}" --password="${DOCKER_REGISTRY_PASSWORD}";
+      docker push $image;
+      docker tag $image xutl/base-php:${OS_NAME}-${OS_VERSION};
+      docker push xutl/base-php:${OS_NAME}-${OS_VERSION};
+    fi;
+
+# vim:set et ts=2 sw=2:
