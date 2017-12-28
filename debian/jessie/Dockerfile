@@ -6,7 +6,7 @@ LABEL maintainer="xutongle@gmail.com"
 ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make pkg-config re2c
 
 RUN set -x \
-	&& sed -i 's/deb.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list \
+#	&& sed -i 's/deb.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		$PHPIZE_DEPS \

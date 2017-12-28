@@ -7,13 +7,13 @@ services:
 
 env:
 #   Centos
-  - OS_NAME=centos OS_VERSION=7 OS_SUITE=1711
+#  - OS_NAME=centos OS_VERSION=7 OS_SUITE=1711
 #   Debian
   - OS_NAME=debian OS_VERSION=8 OS_SUITE=jessie
   - OS_NAME=debian OS_VERSION=9 OS_SUITE=stretch
 #   Ubuntu
-  - OS_NAME=ubuntu OS_VERSION=14.04 OS_SUITE=trusty
-  - OS_NAME=ubuntu OS_VERSION=16.04 OS_SUITE=xenial
+#  - OS_NAME=ubuntu OS_VERSION=14.04 OS_SUITE=trusty
+#  - OS_NAME=ubuntu OS_VERSION=16.04 OS_SUITE=xenial
 
 before_install:
   - export DOCKER_COMPOSE_VERSION=1.18.0
