@@ -24,6 +24,7 @@ RUN set -x \
 		libfreetype6 \
 		libgmp10 \
 		libedit2 \
+		libzip4 \
 	&& rm -r /var/lib/apt/lists/*
 
 RUN cd /usr/local/src \
