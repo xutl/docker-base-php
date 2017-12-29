@@ -8,7 +8,7 @@ ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make pkg-config re2c
 RUN set -x \
 #	&& sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list \
 	&& apt-get update \
-	&& apt-get install -y --no-install-recommends \
+	&& apt-get install -y --no-install-recommends --no-install-suggests \
 		$PHPIZE_DEPS \
 		curl \
 		libssl1.0.0 \
