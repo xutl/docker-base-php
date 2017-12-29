@@ -23,6 +23,7 @@ RUN set -x \
 		libbz2-1.0 \
 		libfreetype6 \
 		libgmp10 \
+		libedit2 \
 	&& rm -r /var/lib/apt/lists/*
 
 RUN cd /usr/local/src \
