@@ -11,6 +11,7 @@ RUN set -x \
 	&& apt-get install -y --no-install-recommends \
 		$PHPIZE_DEPS \
 		curl \
+		libssl1.0.0 \
 		libedit2 \
 		libsqlite3-0 \
 		libxml2 \
