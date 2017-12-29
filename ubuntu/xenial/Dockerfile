@@ -18,8 +18,11 @@ RUN set -x \
 		libxslt1.1 \
 		libtidy-0.99-0 \
 		libjpeg8 \
+		libpng12-0 \
 		libcurl3 \
+		libbz2-1.0 \
 		libfreetype6 \
+		libgmp10 \
 	&& rm -r /var/lib/apt/lists/*
 
 RUN cd /usr/local/src \
