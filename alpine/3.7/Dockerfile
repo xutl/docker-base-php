@@ -16,6 +16,7 @@ RUN set -x \
 		libxml2 \
 		libxslt \
 		libjpeg \
+		libedit \
 		libpng \
 		libcurl \
 		libbz2 \
