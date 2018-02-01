@@ -9,6 +9,10 @@ RUN set -x \
 	&& apk add --no-cache --virtual .persistent-deps \
 		curl \
 		gmp \
+		bzip2 \
+		freetype \
+		tar \
+		libressl \
 		libxml2 \
 		libxslt \
 		libjpeg \
@@ -16,9 +20,6 @@ RUN set -x \
 		libcurl \
 		libbz2 \
 		libzip \
-		freetype \
-		tar \
-		libressl \
 	&& addgroup -g 82 -S www-data \
 	&& adduser -u 82 -D -S -G www-data www-data
 # 82 is the standard uid/gid for "www-data" in Alpine
