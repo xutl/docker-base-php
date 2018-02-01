@@ -15,6 +15,8 @@ RUN set -x \
 		libpng \
 		libcurl \
 		libbz2 \
+		libzip \
+		freetype \
 		tar \
 		libressl \
 	&& addgroup -g 82 -S www-data \
