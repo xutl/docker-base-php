@@ -5,15 +5,15 @@ LABEL maintainer="xutongle@gmail.com"
 # persistent / runtime deps
 ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make re2c
 
-RUN apk add --no-cache --virtual .persistent-deps \
-		curl \
-		tar \
-		libressl
-
-# ensure www-data user exists
 RUN set -x \
 	&& apk add --no-cache --virtual .persistent-deps \
 		curl \
+		libxml2 \
+		libxslt \
+		libjpeg \
+		libpng \
+		libcurl \
+		libbz2 \
 		tar \
 		libressl \
 	&& addgroup -g 82 -S www-data \
