@@ -6,6 +6,8 @@ services:
   - docker
 
 env:
+#   Alpine
+  - OS_NAME=alpine OS_VERSION=3.7 OS_SUITE=3.7
 #   Centos
   - OS_NAME=centos OS_VERSION=7 OS_SUITE=1711
 #   Debian
