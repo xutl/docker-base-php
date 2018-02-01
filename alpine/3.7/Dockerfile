@@ -8,6 +8,7 @@ ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make re2c
 RUN set -x \
 	&& apk add --no-cache --virtual .persistent-deps \
 		curl \
+		gmp \
 		libxml2 \
 		libxslt \
 		libjpeg \
