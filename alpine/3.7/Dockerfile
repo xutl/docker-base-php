@@ -34,5 +34,5 @@ RUN set -x \
 	&& ./configure --prefix=/usr/local --libdir=/usr/local/lib64 --enable-static \
 	&& make -j "$(nproc)" \
 	&& make install \
-	&& rm -rf /tmp/libiconv-1.15
+	&& rm -rf /tmp/libiconv-1.15 \
 	&& apk del .build-deps
