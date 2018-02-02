@@ -18,7 +18,7 @@ RUN set -x \
 		tidyhtml \
 		libxml2 \
 		libxslt \
-		libjpeg \
+		libjpeg-turbo \
 		libedit \
 		libpng \
 		libcurl \
