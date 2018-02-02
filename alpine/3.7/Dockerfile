@@ -13,6 +13,8 @@ RUN set -x \
 		freetype \
 		tar \
 		libressl \
+		icu \
+		gettext \
 		libxml2 \
 		libxslt \
 		libjpeg \
