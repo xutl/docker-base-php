@@ -3,7 +3,7 @@ FROM xutl/alpine:3.7
 LABEL maintainer="xutongle@gmail.com"
 
 # persistent / runtime deps
-ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make re2c
+ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make re2c linux-headers
 
 RUN set -x \
 	&& apk add --no-cache --virtual .persistent-deps \
