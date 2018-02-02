@@ -15,6 +15,7 @@ RUN set -x \
 		libressl \
 		icu \
 		gettext \
+		tidyhtml \
 		libxml2 \
 		libxslt \
 		libjpeg \
