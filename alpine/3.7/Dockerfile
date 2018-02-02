@@ -36,7 +36,7 @@ RUN set -x \
 	&& tar zxf libiconv-1.15.tar.gz \
 	&& rm -rf libiconv-1.15.tar.gz \
 	&& cd libiconv-1.15/ \
-	&& ./configure --prefix=/usr/local --libdir=/usr/local/lib64 --enable-static \
+	&& ./configure --prefix=/usr --enable-static \
 	&& make -j "$(nproc)" \
 	&& make install \
 	&& rm -rf /tmp/libiconv-1.15 \
