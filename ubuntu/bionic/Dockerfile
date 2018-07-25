@@ -11,15 +11,15 @@ RUN set -x \
 	&& apt-get install -y --no-install-recommends --no-install-suggests \
 		$PHPIZE_DEPS \
 		curl \
-		libssl1.0.0 \
+		libssl1.1 \
 		libedit2 \
 		libsqlite3-0 \
 		libxml2 \
 		libxslt1.1 \
-		libtidy-0.99-0 \
-		libjpeg8 \
-		libpng12-0 \
-		libcurl3 \
+		libtidy5 \
+		libjpeg9 \
+		libpng16-16 \
+		libcurl4 \
 		libbz2-1.0 \
 		libfreetype6 \
 		libgmp10 \
