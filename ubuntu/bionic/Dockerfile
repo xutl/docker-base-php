@@ -25,6 +25,7 @@ RUN set -x \
 		libgmp10 \
 		libedit2 \
 		libzip4 \
+		zlib1g \
 	&& rm -r /var/lib/apt/lists/*
 
 RUN cd /usr/local/src \
