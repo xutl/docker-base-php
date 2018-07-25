@@ -16,6 +16,7 @@ env:
 #   Ubuntu
 #  - OS_NAME=ubuntu OS_VERSION=14.04 OS_SUITE=trusty
   - OS_NAME=ubuntu OS_VERSION=16.04 OS_SUITE=xenial
+  - OS_NAME=ubuntu OS_VERSION=18.04 OS_SUITE=bionic
 
 before_install:
   - export DOCKER_COMPOSE_VERSION=1.18.0
