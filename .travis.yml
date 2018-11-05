@@ -8,8 +8,9 @@ services:
 env:
 #   Alpine
   - OS_NAME=alpine OS_VERSION=3.7 OS_SUITE=3.7
+  - OS_NAME=alpine OS_VERSION=3.8 OS_SUITE=3.8
 #   Centos
-#  - OS_NAME=centos OS_VERSION=7 OS_SUITE=1711
+#  - OS_NAME=centos OS_VERSION=7 OS_SUITE=1611
 #   Debian
 #  - OS_NAME=debian OS_VERSION=8 OS_SUITE=jessie
   - OS_NAME=debian OS_VERSION=9 OS_SUITE=stretch
